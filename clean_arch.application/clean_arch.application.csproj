@@ -10,6 +10,7 @@
     <Folder Include="Behaviors\" />
     <Folder Include="Extensions\" />
     <Folder Include="IntegrationEvents\" />
+    <Folder Include="Exceptions\" />
     <Folder Include="Queries\" />
   </ItemGroup>
 
