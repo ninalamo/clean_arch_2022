@@ -1,4 +1,4 @@
-﻿using SAFRA.SMCMS.SharedKernel.Domain.SeedWork;
+﻿using clean_arch.common.Domain.Seedwork;
 using System.Collections.Generic;
 
 namespace clean_arch.domain.ValueObjects

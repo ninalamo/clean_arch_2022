@@ -1,11 +1,13 @@
-﻿using clean_arch.domain.Aggregates.Customers;
+﻿using clean_arch.common.Domain.Seedwork;
+using clean_arch.common.Domain.Seedwork.Interfaces;
+using clean_arch.domain.Aggregates.Customers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace clean_arch.domain.Aggregates.Banks
 {
-    public class Bank
+    public class Bank : BaseEntity, IAggregateRoot
     {
         public string Name { get; private set; }
 

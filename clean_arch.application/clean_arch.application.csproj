@@ -5,16 +5,22 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\Customers\AddCustomer\" />
     <Folder Include="DomainEvents\" />
-    <Folder Include="Extensions\" />
     <Folder Include="IntegrationEvents\" />
     <Folder Include="Exceptions\" />
     <Folder Include="Queries\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.3.0" />
+    <PackageReference Include="FluentValidation" Version="10.3.6" />
     <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Serilog" Version="2.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\clean_arch.infrastructure\clean_arch.infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

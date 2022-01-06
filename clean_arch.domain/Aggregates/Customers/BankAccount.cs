@@ -5,14 +5,12 @@ namespace clean_arch.domain.Aggregates.Customers
 {
     public class BankAccount : BaseEntity
     {
-        public DateTimeOffset LastTransactionDate { get; private set; }
         public string PIN { get; private set; }
-
         public decimal Balance { get; private set; }
-        public Guid AccountTypeID { get; private set; }
+        public int AccountTypeID { get; private set; }
         public string Number { get; private set; }
 
-        public BankAccount AccountType { get; private set; }
+        public BankAccountType AccountType { get; private set; }
 
         public BankAccount()
         {
@@ -31,18 +29,11 @@ namespace clean_arch.domain.Aggregates.Customers
             }
 
             Balance -= amount;
-            LastTransactionDate = DateTimeOffset.Now;
         }
 
         public void Deposit(decimal amount)
         {
             Balance += amount;
-            LastTransactionDate = DateTimeOffset.Now;
-        }
-
-        public void BalanceInquiry()
-        {
-            LastTransactionDate = DateTimeOffset.Now;
         }
 
         public void ResetPIN(string oldPIN, string newPIN)

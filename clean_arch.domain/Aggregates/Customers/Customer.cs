@@ -1,7 +1,6 @@
 ﻿using clean_arch.common.Domain.Seedwork;
 using clean_arch.common.Domain.Seedwork.Interfaces;
 using clean_arch.domain.ValueObjects;
-using SAFRA.SMCMS.SharedKernel.Domain.SeedWork;
 using System.Collections.Generic;
 
 namespace clean_arch.domain.Aggregates.Customers
@@ -18,6 +17,10 @@ namespace clean_arch.domain.Aggregates.Customers
 
         private List<BankAccount> _bankAccounts;
         public IReadOnlyCollection<BankAccount> BankAccounts => _bankAccounts.AsReadOnly();
+
+        private List<BankTransaction> _transactions;
+        public IReadOnlyCollection<BankTransaction> Transactions => _transactions.AsReadOnly();
+
 
 
         #region Ctor
@@ -59,7 +62,10 @@ namespace clean_arch.domain.Aggregates.Customers
 
     public class UserAccount : ValueObject
     {
-        public string U
+        public string UserName { get; private set; }
+        public string Password { get; private set; }
+
+
         protected override IEnumerable<object> GetEqualityComponents()
         {
             throw new System.NotImplementedException();

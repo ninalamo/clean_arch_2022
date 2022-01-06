@@ -1,10 +1,13 @@
-﻿using MediatR;
+﻿using clean_arch.application.Extensions;
+using FluentValidation;
+using MediatR;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SAFRA.SMCMS.MembershipService.Application.Behaviors
+namespace clean_arch.application.Behaviors
 {
     public class ValidatorBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     {
@@ -40,7 +43,7 @@ namespace SAFRA.SMCMS.MembershipService.Application.Behaviors
             {
                 _logger.LogWarning("Validation errors - {CommandType} - Command: {@Command} - Errors: {@ValidationErrors}", typeName, request, failures);
 
-                throw new SpecialValidationException($"Command Validation Errors for type {typeof(TRequest).Name}.{Environment.NewLine} {string.Join(", ", failures.Select(x => x.ErrorMessage).ToArray())}");
+                throw new ValidationException($"Command Validation Errors for type {typeof(TRequest).Name}.{Environment.NewLine} {string.Join(", ", failures.Select(x => x.ErrorMessage).ToArray())}");
 
             }
 

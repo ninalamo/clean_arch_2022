@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
-namespace SAFRA.SMCMS.SharedKernel.Domain.SeedWork
+namespace clean_arch.common.Domain.Seedwork
 {
     public abstract class ValueObject
     {
@@ -16,7 +17,7 @@ namespace SAFRA.SMCMS.SharedKernel.Domain.SeedWork
 
         protected static bool NotEqualOperator(ValueObject left, ValueObject right)
         {
-            return !(EqualOperator(left, right));
+            return !EqualOperator(left, right);
         }
 
         protected abstract IEnumerable<object> GetEqualityComponents();
@@ -30,7 +31,7 @@ namespace SAFRA.SMCMS.SharedKernel.Domain.SeedWork
 
             var other = (ValueObject)obj;
 
-            return this.GetEqualityComponents().SequenceEqual(other.GetEqualityComponents());
+            return GetEqualityComponents().SequenceEqual(other.GetEqualityComponents());
         }
 
         public override int GetHashCode()
@@ -42,7 +43,7 @@ namespace SAFRA.SMCMS.SharedKernel.Domain.SeedWork
 
         public ValueObject GetCopy()
         {
-            return this.MemberwiseClone() as ValueObject;
+            return MemberwiseClone() as ValueObject;
         }
     }
 }

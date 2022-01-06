@@ -2,13 +2,14 @@
 
 namespace clean_arch.domain.Aggregates.Customers
 {
-    public class BankAccountType : BaseEntity
+    public class BankAccountType : Enumeration
     {
-        public BankAccountType(string name)
-        {
-            Name = name;
-        }
 
-        public string Name { get; private set; }
+        public static BankAccountType Savings = new(1, nameof(Savings));
+        public static BankAccountType Checking = new(2, nameof(Checking));
+
+        public BankAccountType(int id, string name) : base(id, name)
+        {
+        }
     }
 }

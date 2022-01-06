@@ -1,4 +1,6 @@
-﻿using MediatR;
+﻿using clean_arch.application.Extensions;
+using MediatR;
+using Microsoft.Extensions.Logging;
 using System.Threading;
 using System.Threading.Tasks;
 

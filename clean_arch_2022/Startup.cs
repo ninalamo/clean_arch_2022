@@ -1,9 +1,13 @@
+using clean_arch.infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using System;
+using System.Reflection;
 
 namespace clean_arch_2022
 {
@@ -20,7 +24,16 @@ namespace clean_arch_2022
         public void ConfigureServices(IServiceCollection services)
         {
 
+
+            string apiAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
+
+
             services.AddControllers();
+            services.AddCustomDbContext(Configuration, apiAssembly);
+              
+
+           
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "clean_arch_2022", Version = "v1" });
