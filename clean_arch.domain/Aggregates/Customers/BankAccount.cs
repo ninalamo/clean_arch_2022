@@ -47,19 +47,14 @@ namespace clean_arch.domain.Aggregates.Customers
 
         public void ResetPIN(string oldPIN, string newPIN)
         {
-            if (oldPIN != newPIN)
+            if (oldPIN == PIN)
             {
-                newPIN = oldPIN;
+                PIN = newPIN;
             }
 
             throw new Exception("Invalid PIN. Cannot process.");
         }
 
         #endregion
-    }
-
-    public class BankAccountType : BaseEntity
-    {
-        public string Name { get; private set; }
     }
 }

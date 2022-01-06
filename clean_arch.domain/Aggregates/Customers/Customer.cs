@@ -1,6 +1,7 @@
 ﻿using clean_arch.common.Domain.Seedwork;
 using clean_arch.common.Domain.Seedwork.Interfaces;
 using clean_arch.domain.ValueObjects;
+using SAFRA.SMCMS.SharedKernel.Domain.SeedWork;
 using System.Collections.Generic;
 
 namespace clean_arch.domain.Aggregates.Customers
@@ -56,7 +57,14 @@ namespace clean_arch.domain.Aggregates.Customers
         #endregion
     }
 
-
+    public class UserAccount : ValueObject
+    {
+        public string U
+        protected override IEnumerable<object> GetEqualityComponents()
+        {
+            throw new System.NotImplementedException();
+        }
+    }
 
 
 }

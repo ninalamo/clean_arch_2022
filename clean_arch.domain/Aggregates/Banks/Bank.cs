@@ -32,8 +32,6 @@ namespace clean_arch.domain.Aggregates.Banks
             _customers.Remove(customer);
         }
 
-        public bool FundTransfer(Guid customerId, string pin)
-
         #endregion
 
     }
