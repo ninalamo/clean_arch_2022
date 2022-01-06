@@ -18,6 +18,12 @@ namespace clean_arch.domain.Aggregates.Customers
             PIN = generator.Next(0, 1000000).ToString("D6");
         }
 
+        public BankAccount(decimal initialDeposit, int accountType, string PIN)
+        {
+            Balance = initialDeposit;
+            AccountTypeID = accountType;
+        }
+
 
         #region Behaviors /Methods
 

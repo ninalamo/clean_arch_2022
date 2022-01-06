@@ -26,6 +26,7 @@ namespace clean_arch.infrastructure
         #region DbSet(s)
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Bank> Banks { get; set; }
+        public DbSet<BankAccountType> BankAccountTypes { get; set; }
 
         #endregion
 

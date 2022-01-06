@@ -1,6 +1,7 @@
 ﻿using clean_arch.common.Domain.Seedwork;
 using clean_arch.common.Domain.Seedwork.Interfaces;
 using clean_arch.domain.ValueObjects;
+using System;
 using System.Collections.Generic;
 
 namespace clean_arch.domain.Aggregates.Customers
@@ -28,6 +29,8 @@ namespace clean_arch.domain.Aggregates.Customers
         protected Customer()
         {
             Address = new Address();
+            _bankAccounts = new();
+            _transactions = new();
         }
 
         public Customer(string firstName, string lastName, string middleName, string nameSuffix)
@@ -55,6 +58,13 @@ namespace clean_arch.domain.Aggregates.Customers
         public void SetAddress(string addressLine1, string addressLine2, string city, string state, string country, string postalCode)
         {
             if (Address == default) Address = new Address(addressLine1, addressLine2, city, state, country, postalCode);
+        }
+
+        public void AddBankAccount(decimal initialBalance, int accountType, string PIN)
+        {
+            _bankAccounts.Add(new BankAccount(initialBalance, accountType, PIN));
+
+            _transactions.Add(new BankTransaction(DateTimeOffset.Now, accountType.ToString(), "Bank account added.", initialBalance));
         }
 
         #endregion

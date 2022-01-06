@@ -11,5 +11,10 @@ namespace clean_arch.domain.Aggregates.Customers
         public BankAccountType(int id, string name) : base(id, name)
         {
         }
+
+        public BankAccountType(string name) : base(0, name)
+        {
+            
+        }
     }
 }

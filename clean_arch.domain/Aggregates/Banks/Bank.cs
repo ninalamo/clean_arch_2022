@@ -23,9 +23,9 @@ namespace clean_arch.domain.Aggregates.Banks
 
         #region Behaviors / Methods
 
-        public void AddUser(Customer customer, string pin)
+        public void AddUser(Customer customer)
         {
-            if (_customers.Any(c => c.Id == customer.Id)) ;
+            _customers.Add(customer);
         }
 
         public void RemoveUser(Guid id)
