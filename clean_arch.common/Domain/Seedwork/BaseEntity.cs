@@ -75,7 +75,7 @@ namespace clean_arch.common.Domain.Seedwork
 
             BaseEntity baseEntity = (BaseEntity)obj;
 
-            if (baseEntity.IsTransient() || IsTransient())  return false;
+            if (baseEntity.IsTransient() || IsTransient()) return false;
 
             return baseEntity.Id == Id;
         }
@@ -92,14 +92,14 @@ namespace clean_arch.common.Domain.Seedwork
             return base.GetHashCode();
         }
 
-        public static bool operator == (BaseEntity left, BaseEntity right)
+        public static bool operator ==(BaseEntity left, BaseEntity right)
         {
-            if (Equals(left, null))  return Equals(right, null);
+            if (Equals(left, null)) return Equals(right, null);
 
             return left.Equals(right);
         }
 
         public static bool operator !=(BaseEntity left, BaseEntity right) => !(left == right);
-        
+
     }
 }

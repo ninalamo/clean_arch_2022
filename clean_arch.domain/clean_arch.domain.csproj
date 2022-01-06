@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Aggregates\Customers\" />
-    <Folder Include="Aggregates\Banks\" />
+    <ProjectReference Include="..\clean_arch.common\clean_arch.common.csproj" />
   </ItemGroup>
 
 </Project>
