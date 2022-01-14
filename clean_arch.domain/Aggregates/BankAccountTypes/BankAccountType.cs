@@ -1,6 +1,6 @@
 ﻿using clean_arch.common.Domain.Seedwork;
 
-namespace clean_arch.domain.Aggregates.Customers
+namespace clean_arch.domain.Aggregates.BankAccountTypes
 {
     public class BankAccountType : Enumeration
     {
@@ -14,7 +14,7 @@ namespace clean_arch.domain.Aggregates.Customers
 
         public BankAccountType(string name) : base(0, name)
         {
-            
+
         }
     }
 }

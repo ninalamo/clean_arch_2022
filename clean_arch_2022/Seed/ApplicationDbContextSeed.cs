@@ -1,6 +1,6 @@
 ﻿namespace clean_arch_2022.Seed
 {
-    using clean_arch.domain.Aggregates.Customers;
+    using clean_arch.domain.Aggregates.BankAccountTypes;
     using clean_arch.infrastructure;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Data.SqlClient;
@@ -58,7 +58,7 @@
                         {
                             new BankAccountType("Savings"),
                             new BankAccountType("Checking")
-                        }) ;
+                        });
                     }
 
                     await context.SaveChangesAsync();

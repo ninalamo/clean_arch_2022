@@ -1,7 +1,7 @@
 ﻿using Autofac;
 using System.Reflection;
 
-namespace SAFRA.SMCMS.MembershipService.Application.AutofacModules
+namespace clean_arch.application.AutofacModules
 {
     public class ApplicationModule
         : Autofac.Module
@@ -25,105 +25,105 @@ namespace SAFRA.SMCMS.MembershipService.Application.AutofacModules
 
             #region Entity Repositories
 
-         //   builder.RegisterType<CustomerRepo>()
-         //.As<ICodeTypeRepository>()
-         //.InstancePerLifetimeScope();
+            //   builder.RegisterType<CustomerRepo>()
+            //.As<ICodeTypeRepository>()
+            //.InstancePerLifetimeScope();
 
 
-         //   builder.RegisterType<CustomerRepository>()
-         //       .As<ICustomerRepository>()
-         //       .InstancePerLifetimeScope();
+            //   builder.RegisterType<CustomerRepository>()
+            //       .As<ICustomerRepository>()
+            //       .InstancePerLifetimeScope();
 
-         //   builder.RegisterType<MemberTypeRepository>()
-         //       .As<IMemberTypeRepository>()
-         //       .InstancePerLifetimeScope();
+            //   builder.RegisterType<MemberTypeRepository>()
+            //       .As<IMemberTypeRepository>()
+            //       .InstancePerLifetimeScope();
 
-         //   builder.RegisterType<MembershipRepository>()
-         //       .As<IMembershipRepository>()
-         //       .InstancePerLifetimeScope();
+            //   builder.RegisterType<MembershipRepository>()
+            //       .As<IMembershipRepository>()
+            //       .InstancePerLifetimeScope();
 
-         //   builder.RegisterType<MembershipChargeRateRepository>()
-         //       .As<IMembershipChargeRateRepository>();
+            //   builder.RegisterType<MembershipChargeRateRepository>()
+            //       .As<IMembershipChargeRateRepository>();
 
-         //   builder.RegisterType<MembershipSuspensionReleaseRequestRepository>()
-         //       .As<IMembershipSuspensionReleaseRequestRepository>()
-         //       .InstancePerLifetimeScope();
+            //   builder.RegisterType<MembershipSuspensionReleaseRequestRepository>()
+            //       .As<IMembershipSuspensionReleaseRequestRepository>()
+            //       .InstancePerLifetimeScope();
 
-         //   builder.RegisterType<MembershipSuspensionRequestRepository>()
-         //       .As<IMembershipSuspensionRequestRepository>()
-         //       .InstancePerLifetimeScope();
+            //   builder.RegisterType<MembershipSuspensionRequestRepository>()
+            //       .As<IMembershipSuspensionRequestRepository>()
+            //       .InstancePerLifetimeScope();
 
-         //   builder.RegisterType<UserAccountRepository>()
-         //       .As<IUserAccountRepository>()
-         //       .InstancePerLifetimeScope();
+            //   builder.RegisterType<UserAccountRepository>()
+            //       .As<IUserAccountRepository>()
+            //       .InstancePerLifetimeScope();
 
-         //   builder.RegisterType<MemberStatusReasonCodeRepository>()
-         //       .As<IMemberStatusReasonCodeRepository>()
-         //       .InstancePerLifetimeScope();
+            //   builder.RegisterType<MemberStatusReasonCodeRepository>()
+            //       .As<IMemberStatusReasonCodeRepository>()
+            //       .InstancePerLifetimeScope();
 
-         //   builder.RegisterType<MembershipRenewalAdviceSettingRepository>()
-         //       .As<IMembershipRenewalAdviceSettingRepository>()
-         //       .InstancePerLifetimeScope();
+            //   builder.RegisterType<MembershipRenewalAdviceSettingRepository>()
+            //       .As<IMembershipRenewalAdviceSettingRepository>()
+            //       .InstancePerLifetimeScope();
 
-         //   builder.RegisterType<MembershipResignationRequestRepository>()
-         //       .As<IMembershipResignationRequestRepository>()
-         //       .InstancePerLifetimeScope();
+            //   builder.RegisterType<MembershipResignationRequestRepository>()
+            //       .As<IMembershipResignationRequestRepository>()
+            //       .InstancePerLifetimeScope();
 
-         //   builder.RegisterType<MembershipDefermentRequestRepository>()
-         //       .As<IMembershipDefermentRequestRepository>()
-         //       .InstancePerLifetimeScope();
+            //   builder.RegisterType<MembershipDefermentRequestRepository>()
+            //       .As<IMembershipDefermentRequestRepository>()
+            //       .InstancePerLifetimeScope();
 
-         //   builder.RegisterType<MembershipDefermentReleaseRequestRepository>()
-         //       .As<IMembershipDefermentReleaseRequestRepository>()
-         //       .InstancePerLifetimeScope();
+            //   builder.RegisterType<MembershipDefermentReleaseRequestRepository>()
+            //       .As<IMembershipDefermentReleaseRequestRepository>()
+            //       .InstancePerLifetimeScope();
 
-         //   builder.RegisterType<BatchMembershipDefermentRequestRepository>()
-         //       .As<IBatchMembershipDefermentRequestRepository>()
-         //       .InstancePerLifetimeScope();
+            //   builder.RegisterType<BatchMembershipDefermentRequestRepository>()
+            //       .As<IBatchMembershipDefermentRequestRepository>()
+            //       .InstancePerLifetimeScope();
 
-         //   builder.RegisterType<BatchMembershipWaiverRequestRepository>()
-         //       .As<IBatchMembershipWaiverRequestRepository>()
-         //       .InstancePerLifetimeScope();
+            //   builder.RegisterType<BatchMembershipWaiverRequestRepository>()
+            //       .As<IBatchMembershipWaiverRequestRepository>()
+            //       .InstancePerLifetimeScope();
 
-         //   builder.RegisterType<MembershipModuleSettingRepository>()
-         //       .As<IMembershipModuleSettingRepository>()
-         //       .InstancePerLifetimeScope();
+            //   builder.RegisterType<MembershipModuleSettingRepository>()
+            //       .As<IMembershipModuleSettingRepository>()
+            //       .InstancePerLifetimeScope();
 
-         //   builder.RegisterType<OperationReasonRepository>()
-         //       .As<IOperationReasonRepository>()
-         //       .InstancePerLifetimeScope();
+            //   builder.RegisterType<OperationReasonRepository>()
+            //       .As<IOperationReasonRepository>()
+            //       .InstancePerLifetimeScope();
 
-         //   builder.RegisterType<SourceChannelRepository>()
-         //       .As<ISourceChannelRepository>()
-         //       .InstancePerLifetimeScope();
+            //   builder.RegisterType<SourceChannelRepository>()
+            //       .As<ISourceChannelRepository>()
+            //       .InstancePerLifetimeScope();
 
-         //   builder.RegisterType<SourceChannelPamentMethodRepository>()
-         //       .As<ISourceChannelPaymentMethodRepository>()
-         //       .InstancePerLifetimeScope();
+            //   builder.RegisterType<SourceChannelPamentMethodRepository>()
+            //       .As<ISourceChannelPaymentMethodRepository>()
+            //       .InstancePerLifetimeScope();
 
-         //   builder.RegisterType<SourceChannelUserRepository>()
-         //       .As<ISourceChannelUserRepository>()
-         //       .InstancePerLifetimeScope();
+            //   builder.RegisterType<SourceChannelUserRepository>()
+            //       .As<ISourceChannelUserRepository>()
+            //       .InstancePerLifetimeScope();
 
-         //   builder.RegisterType<FileRepository>()
-         //       .As<IFileRepository>()
-         //       .InstancePerLifetimeScope();
+            //   builder.RegisterType<FileRepository>()
+            //       .As<IFileRepository>()
+            //       .InstancePerLifetimeScope();
 
-         //   builder.RegisterType<CustomerCategoryTypeRepository>()
-         //       .As<ICustomerCategoryTypeRepository>()
-         //       .InstancePerLifetimeScope();
+            //   builder.RegisterType<CustomerCategoryTypeRepository>()
+            //       .As<ICustomerCategoryTypeRepository>()
+            //       .InstancePerLifetimeScope();
 
-         //   builder.RegisterType<CustomerCategoryRepository>()
-         //       .As<ICustomerCategoryRepository>()
-         //       .InstancePerLifetimeScope();
+            //   builder.RegisterType<CustomerCategoryRepository>()
+            //       .As<ICustomerCategoryRepository>()
+            //       .InstancePerLifetimeScope();
 
-         //   builder.RegisterType<WarehouseRepository>()
-         //       .As<IWarehouseRepository>()
-         //       .InstancePerLifetimeScope();
+            //   builder.RegisterType<WarehouseRepository>()
+            //       .As<IWarehouseRepository>()
+            //       .InstancePerLifetimeScope();
 
-         //   builder.RegisterType<PaymentModeRepository>()
-         //       .As<IPaymentModeRepository>()
-         //       .InstancePerLifetimeScope();
+            //   builder.RegisterType<PaymentModeRepository>()
+            //       .As<IPaymentModeRepository>()
+            //       .InstancePerLifetimeScope();
 
             //builder.RegisterType<MembershipTransactionRepository>()
             //   .As<IMembershipTransactionRepository>()

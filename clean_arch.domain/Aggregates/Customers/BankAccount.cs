@@ -1,4 +1,5 @@
 ﻿using clean_arch.common.Domain.Seedwork;
+using clean_arch.domain.Aggregates.BankAccountTypes;
 using System;
 
 namespace clean_arch.domain.Aggregates.Customers

@@ -1,4 +1,5 @@
 ﻿using clean_arch.common.Domain.Seedwork.Interfaces;
+using clean_arch.domain.Aggregates.BankAccountTypes;
 using clean_arch.domain.Aggregates.Banks;
 using clean_arch.domain.Aggregates.Customers;
 using clean_arch.infrastructure.Extensions;

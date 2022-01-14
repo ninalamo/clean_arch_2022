@@ -1,10 +1,9 @@
 ﻿using Autofac;
 using clean_arch.application.Behaviors;
 using MediatR;
-using SAFRA.SMCMS.MembershipService.Application.Behaviors;
 using System.Reflection;
 
-namespace SAFRA.SMCMS.MembershipService.Application.AutofacModules
+namespace clean_arch.application.AutofacModules
 {
     public class MediatorModule : Autofac.Module
     {
@@ -39,7 +38,7 @@ namespace SAFRA.SMCMS.MembershipService.Application.AutofacModules
 
             builder.RegisterGeneric(typeof(LoggingBehavior<,>)).As(typeof(IPipelineBehavior<,>));
             builder.RegisterGeneric(typeof(ValidatorBehavior<,>)).As(typeof(IPipelineBehavior<,>));
-            builder.RegisterGeneric(typeof(TransactionBehaviour<,>)).As(typeof(IPipelineBehavior<,>));
+            //builder.RegisterGeneric(typeof(TransactionBehaviour<,>)).As(typeof(IPipelineBehavior<,>));
 
         }
         #endregion

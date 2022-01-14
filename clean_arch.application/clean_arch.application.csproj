@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Commands\Banks\" />
+    <Folder Include="Commands\Customers\EditCustomer\" />
+    <Folder Include="Commands\Customers\ChangePIN\" />
+    <Folder Include="Commands\Customers\ResetPIN\" />
     <Folder Include="DomainEvents\" />
     <Folder Include="IntegrationEvents\" />
     <Folder Include="Exceptions\" />
